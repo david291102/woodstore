@@ -1,0 +1,36 @@
+/* css/responsive.css - page-specific breakpoints (320px to 1440px+) */
+@media (max-width:1024px){
+  .grid-4,.gallery{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .section{padding:2.8rem 0}
+  .split,.grid-2,.form-grid{grid-template-columns:1fr}
+  .hero{min-height:480px}
+  .hero::after{background:rgba(40,24,20,.72)}
+  .page-hero{padding:2.8rem 0}
+  .toolbar{flex-direction:column;align-items:stretch}
+  .search{max-width:none}
+  .lb-prev,.lb-next{top:auto;bottom:1rem}
+}
+@media (max-width:560px){
+  .grid-3,.grid-4,.steps{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;gap:.6rem}
+  .btn-row .btn{flex:1 1 100%;text-align:center}
+  .form-card{padding:1.1rem}
+  .hero h1{max-width:none}
+}
+@media (max-width:360px){body{font-size:.96rem}.filter-btn{padding:.45rem .8rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gallery img,.btn{transition:none}}
+/* contact page two-column layout collapses on tablets/phones */
+@media (max-width:768px){#contactGrid{grid-template-columns:1fr !important}}
+
+/* Phones and tablets: help buttons become a bottom bar */
+@media (max-width:768px){
+  body{padding-bottom:64px}
+  .fab{left:0;right:0;bottom:0;flex-direction:row;gap:0;padding:0;align-items:stretch}
+  .fab-btn{flex:1;justify-content:center;border-radius:0;box-shadow:none;min-height:56px;padding:.6rem}
+  .fab-top{position:fixed;right:.8rem;bottom:72px}
+}
+@media (max-width:560px){.quick .grid-4{grid-template-columns:1fr 1fr}.quick-link{padding:.8rem}}
